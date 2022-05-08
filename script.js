@@ -1,6 +1,6 @@
 'use strict';
 
-let num1 = 1000;
+let num1 = 20;
 let num2 = 3000;
 
 console.log(getGreatestCommonDivisor(num1, num2));
