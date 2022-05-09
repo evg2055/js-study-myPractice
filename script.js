@@ -1,44 +1,55 @@
-'use strict';
+let arr = [1, 3, 4, 6, 7, 9];
 
-let num1 = 20;
-let num2 = 3000;
 
-console.log(getGreatestCommonDivisor(num1, num2));
+// function randomInt (min, max) {
+// 	return Math.floor(Math.random() * (max - min + 1) + min);
+// }
 
-function getGreatestCommonDivisor(num1, num2) {
-	let arrCommomDivisor = arrDouble(num1, num2);
+// console.log(randomInt(10, 100));
 
-	return Math.max.apply(0, arrCommomDivisor);
+// function shuffle(arr) {
+// 	let result = [];
+
+// 	while (arr.length > 0) {
+// 		let random = randomInt(0, arr.length - 1);
+// 		let elem = arr.splice(random, 1)[0];
+// 		result.push(elem);
+// 	}
+
+// 	return result;
+// }
+//  console.log(shuffle(arr));
+
+function getRandomInt(min, max) {
+	return Math.floor(Math.random() * (max - min +1) + min);
 }
-function arrDouble(num1, num2) {
-	let divisorArr1 = getDivisor(num1);
-	let divisorArr2 = getDivisor(num2);
-	let result = []; 
 
-	for (let elem of divisorArr1) {
-		if (inArray(elem, divisorArr2)) {
-			result.push(elem);
-		}
-	}
-	return result;
-}
-
-// console.log(arrDouble(12, 18));
-
-function getDivisor(num) {
+function getArr(start, end) {
 	let result = [];
 
-	for (let i = 2; i < num; i++) {
-		if (num % i == 0) {
-			result.push(i);
-		}
+	for (let i = start; i <= end; i++) {
+		result.push(i);
 	}
+
 	return result;
 }
 
-// console.log(getDivisor(12));
+// console.log(getArr(2, 13));
 
-function inArray(elem, arr){
-	return arr.indexOf(elem) !== -1;
+function shuffle(arr) {
+	let result = [];
+	
+	while (arr.length > 0) {
+		let random = getRandomInt(0, arr.length - 1);
+		let elem = arr.splice(random, 1)[0];
+		result.push(elem);
+	}
+
+	return result;
 }
-// console.log(inArray(4, [33, 3, 3, 4, 5]));
+
+function shuffleArr(start, end) {
+	return shuffle(getArr(start, end));
+}
+
+console.log(shuffleArr(10, 25));
