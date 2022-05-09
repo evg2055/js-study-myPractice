@@ -1,55 +1,39 @@
-let arr = [1, 3, 4, 6, 7, 9];
-
-
-// function randomInt (min, max) {
-// 	return Math.floor(Math.random() * (max - min + 1) + min);
-// }
-
-// console.log(randomInt(10, 100));
-
-// function shuffle(arr) {
-// 	let result = [];
-
-// 	while (arr.length > 0) {
-// 		let random = randomInt(0, arr.length - 1);
-// 		let elem = arr.splice(random, 1)[0];
-// 		result.push(elem);
-// 	}
-
-// 	return result;
-// }
-//  console.log(shuffle(arr));
-
-function getRandomInt(min, max) {
-	return Math.floor(Math.random() * (max - min +1) + min);
-}
-
-function getArr(start, end) {
+function getLackyTickets() {
 	let result = [];
 
-	for (let i = start; i <= end; i++) {
-		result.push(i);
+	for (let i = 1001; i < 1000000; i++) {
+		if (lackyIs(i)) {
+			result.push(normalizeNum(i));
+		}
 	}
 
 	return result;
 }
 
-// console.log(getArr(2, 13));
+console.log(getLackyTickets());
 
-function shuffle(arr) {
-	let result = [];
-	
-	while (arr.length > 0) {
-		let random = getRandomInt(0, arr.length - 1);
-		let elem = arr.splice(random, 1)[0];
-		result.push(elem);
+function lackyIs(num) {
+	let str = String(normalizeNum(num));
+
+	let sum1 = +(str[0]) + +(str[1]) + +(str[2]);
+	let sum2 = +(str[3]) + +(str[4]) + +(str[5]);
+
+	return sum1 == sum2;
+}
+
+// console.log(lackyIs(101200));
+
+function normalizeNum(num) {
+	let str = String(num);
+
+	if (str.length == 5) {
+		str = '0' + str;
+	}
+	if (str.length == 4) {
+		str = '00' + str;
 	}
 
-	return result;
+	return str;
 }
 
-function shuffleArr(start, end) {
-	return shuffle(getArr(start, end));
-}
-
-console.log(shuffleArr(10, 25));
+// console.log(normalizeNum(21223));
