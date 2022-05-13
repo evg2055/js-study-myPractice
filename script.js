@@ -1,12 +1,12 @@
-function test(arr, func) {
-    for (let i = 0; i < arr.length; i++){
-    arr[i] = func(arr[i]);
-}
-    return arr;
+function test(num1, num2) {
+    function sqr(num) {
+        return num*num;
+    }
+    function cube(num) {
+        return num*num*num;
+    }
+
+    return sqr(num1) + cube(num2);
 }
 
-function swr(num) {
-    return num*num;
-}
-
-console.log( test([1, 2, 3], swr));
+console.log(test(2, 3));
