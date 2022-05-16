@@ -1,12 +1,28 @@
-function test(num1, num2) {
-    function sqr(num) {
-        return num*num;
-    }
-    function cube(num) {
-        return num*num*num;
-    }
+function test() {
+    let num = 10;
 
-    return sqr(num1) + cube(num2);
-}
+        return function (){
+        if (num >= 0) {
+            alert(num);
+        } else {
+            alert('отсчет окончен');
+        };
+        num--;
+    };
+};
 
-console.log(test(2, 3));
+let func = test();
+func();
+func();
+func();
+func();
+func();
+func();
+func();
+func();
+func();
+func();
+func();
+func();
+func();
+func();
