@@ -1,28 +1,24 @@
-function test() {
-    let num = 10;
+// let arr = ['ret', 'are', 'typ'];
 
-        return function (){
-        if (num >= 0) {
-            alert(num);
-        } else {
-            alert('отсчет окончен');
-        };
-        num--;
-    };
-};
 
-let func = test();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
-func();
+// let newArr = arr.map(function(elem) {
+//    return elem.split('').reverse().join('');
+// })
+
+// console.log(newArr);
+
+// let arr = ['123', '456', '789'];
+
+// let newArr = arr.map(function(strNum) {
+//   return strNum.split('');
+// })
+
+// console.log(newArr);
+
+let arr = [1, 2, 3, 4, 5];
+
+let indexArr = arr.map(function(elem, index) {
+  return elem + String(index);
+})
+
+console.log(indexArr);
