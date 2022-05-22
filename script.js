@@ -1,11 +1,11 @@
-let arr = ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000];
+let date = new Date();
 
-// let name       = arr[0];
-// let surname    = arr[1];
-// let department = arr[2];
-// let position   = arr[3];
-// let salary     = arr[4];
+function addZerro(num) {
+    if(num <= 9) {
+        return'0' + num;
+    } else {
+        return num;
+    }
+};
 
-let [name, surname, department, position, salary] = arr;
-
-console.log(position);
+alert (addZerro(date.getHours()) + ':' + addZerro(date.getMinutes()) + ':' + addZerro(date.getSeconds()) + ' ' + addZerro(date.getDate()) + '-' + addZerro(date.getMonth() + 1) + '-' + date.getFullYear() );
