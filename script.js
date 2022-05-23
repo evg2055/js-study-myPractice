@@ -1,11 +1,4 @@
-let date = new Date();
+let now = new Date ();
+let date = new Date (now.getFullYear(), now.getMonth(), 1);
 
-function addZerro(num) {
-    if(num <= 9) {
-        return'0' + num;
-    } else {
-        return num;
-    }
-};
-
-alert (addZerro(date.getHours()) + ':' + addZerro(date.getMinutes()) + ':' + addZerro(date.getSeconds()) + ' ' + addZerro(date.getDate()) + '-' + addZerro(date.getMonth() + 1) + '-' + date.getFullYear() );
+console.log(date.getDay());
