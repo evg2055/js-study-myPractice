@@ -1,25 +1,26 @@
-// let now  = new Date();
-// let year = now.getFullYear();
+function leapYear (year) {
+    let date = new Date( year, 2, 0);
 
-// for (let month = 0; month <= 11; month++) {
-// 	let date = new Date(year, month, 1);
-	
-// 	if (date.getDay() == 0) {
-// 		console.log(year + '-' + month + '-1');
-// 	}
-// }
-
-
-let now = new Date();
-let count = 0;
-
-for (let year = 2000; year < now.getFullYear() ; year++) {
-    let date = new Date (year, 0);
-
-    if (date.getDay() == 0 || date.getDay() == 6) {
-        console.log(year);
-        count++;
-    }
+    return date.getDate() == 29;
 }
 
-console.log(count);
+let year = 2022;
+
+// console.log(leapYear(2016));
+let lastLeapYear = function() {
+    
+    for (let i = year; leapYear(i) !== true; i++) {
+    
+     if (leapYear(i + 1)) {
+         year = i + 2;
+         return i + 1;
+     };
+}
+};
+
+
+for (let i = 1 ; i < 10; i++) {
+    console.log(lastLeapYear(year));
+};
+
+
