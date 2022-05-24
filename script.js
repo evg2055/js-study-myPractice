@@ -1,26 +1,30 @@
-function leapYear (year) {
-    let date = new Date( year, 2, 0);
+let brDay = '16.04';
+let conLo = console.log;
 
-    return date.getDate() == 29;
+if (brDay >= '21.02' && brDay <= '19.03') {
+    console.log('овен');
 }
 
-let year = 2022;
-
-// console.log(leapYear(2016));
-let lastLeapYear = function() {
-    
-    for (let i = year; leapYear(i) !== true; i++) {
-    
-     if (leapYear(i + 1)) {
-         year = i + 2;
-         return i + 1;
-     };
+if (brDay >= '20.03' && brDay <= '20.04') {
+    console.log('телец');
 }
-};
 
+if (brDay >= '21.04' && brDay <= '21.05') {
+    console.log('близнецы');
+}
 
-for (let i = 1 ; i < 10; i++) {
-    console.log(lastLeapYear(year));
-};
+if (brDay >= '22.05' && brDay <= '22.06') {
+    console.log('рак');
+}
 
+if (brDay >= '23.06' && brDay <= '22.07') {
+    console.log('лев');
+}
 
+if (brDay >= '23.07' && brDay <= '22.08') {
+    conLo('дева');
+}
+
+if (brDay >= '23.08' && brDay <= '23.09') {
+    conLo('весы');
+}
