@@ -1,4 +1,4 @@
-let now = new Date();
-let diner = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12);
+const BUTTON = document.querySelector('#button');
+const P = document.querySelector('#p');
 
-console.log(now < diner);
+BUTTON.addEventListener('dblclick', () => P.innerHTML = '<b>' + P.innerHTML + '</b>');
