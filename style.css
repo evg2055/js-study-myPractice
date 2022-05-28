@@ -5,3 +5,7 @@ p:not(#p) {
     font-size: 100px;
     text-align: center;
 }
+
+#img {
+    width: 300px;
+}
