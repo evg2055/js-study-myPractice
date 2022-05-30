@@ -1,3 +1,8 @@
+const BUTTON = document.querySelector('#button');
 const ELEM = document.querySelector('#elem');
+let result = [];
 
-ELEM.addEventListener('blur', () => ELEM.value = '');
+
+BUTTON.addEventListener('click', function () {
+    console.log(ELEM.className.split(' '));
+})
