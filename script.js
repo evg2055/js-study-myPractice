@@ -21,3 +21,18 @@
 // };
 
 // INPUT.addEventListener('blur', func);
+
+const INPUT = document.querySelectorAll('.text');
+const BUTTON = document.querySelector('#button')
+
+function inp() {
+   let result = 0;
+
+   for(let elem of INPUT) {
+      result += +(elem.value);
+   }
+   
+   document.querySelector('#p5').innerHTML = result;
+}
+
+BUTTON.addEventListener('click', inp);
