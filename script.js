@@ -1,5 +1,9 @@
-const divs = document.querySelectorAll('div');
+const BUTTON = document.querySelector('#button');
+let i = 0;
 
-for (let elem of divs) {
-   elem.addEventListener('click', function () { alert(this.innerHTML)})
+function func() {
+   this.value = i++;
+   if (i > 5) {this.removeEventListener('click', func)}
 }
+
+BUTTON.addEventListener('click', func)
