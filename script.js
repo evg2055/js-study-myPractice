@@ -1,9 +1,8 @@
-const BUTTON = document.querySelector('#button');
-let i = 0;
+const ELEM = document.querySelector('#elem');
 
-function func() {
-   this.value = i++;
-   if (i > 5) {this.removeEventListener('click', func)}
-}
+ELEM.classList.toggle('yyy');
 
-BUTTON.addEventListener('click', func)
+const cont = ELEM.classList.contains('yyy');
+
+console.log(cont);
+
