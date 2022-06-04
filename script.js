@@ -1,8 +1,10 @@
-const ELEM = document.querySelector('#elem');
+const DIV = document.querySelector('#div1');
+const BUTTON = document.querySelector('#button');
 
-ELEM.classList.toggle('yyy');
-
-const cont = ELEM.classList.contains('yyy');
-
-console.log(cont);
-
+BUTTON.addEventListener('click', () => {
+   DIV.style.width = '100px';
+   DIV.style.height = '100px';
+   DIV.style.backgroundColor = 'yellow';
+   DIV.style.color = 'red';
+   DIV.innerHTML = 'hi';
+})
