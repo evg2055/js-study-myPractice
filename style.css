@@ -9,3 +9,9 @@ p:not(.p) {
 #img {
     width: 300px;
 }
+.wrong {
+    color: red;
+}
+.right {
+    color: green;
+}
