@@ -1,9 +1,21 @@
-let input = document.querySelector('#first');
-let button = document.querySelector('#button');
-let obj = {1: 'mon', 2: 'tue', 3: 'wed', 4: 'Thu', 5: 'fri', 6: 'sat', 7:' sat'}
+// Привяжите к тегу ul обработчик клика. В этом обработчике проверяйте с помощью свойства tagName,
+//  по какому тегу был клик. Если клик был по тегу li - добавьте в конец текста этого тега восклицательный 
+//  знак. А если клик был по тегу ul - добавьте ему в конец еще один пункт списка.
 
-button.addEventListener('click', () => {
-	let date = new Date (input.value);
-	console.log(date, obj[date.getDay()]);
-})
+const UL = document.querySelector('#elem');
+let newLi = document.createElement('li');
 
+
+UL.addEventListener('click', (event) => {
+	console.log(event.target.tagName);
+
+	// event.target.tagName === 'LI' ? alert('yes') : alert('null') ;
+
+	if (event.target.tagName === 'LI') {
+		event.target.innerHTML += '!';
+	} else if (event.target.tagName === 'UL'){
+		UL.appendChild(newLi);
+		newLi.textContent = 'text';
+		;
+	}
+} )
