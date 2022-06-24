@@ -1,9 +1,13 @@
-let elem1 = document.querySelector('#elem1');
-elem1.addEventListener('blur', func);
+"use strict";
 
-let elem2 = document.querySelector('#elem2');
-elem2.addEventListener('blur', func);
+let elem = document.querySelector('#elem');
+elem.addEventListener('blur', parent);
 
-function func() {
-	console.log(this.value); // выведет или 'text1', или 'text2'
+function parent() {
+	console.log(this.value); // что выведет?
+	
+	function child() {
+		console.log(this.value); // что выведет?
+	}
+	child();
 }
