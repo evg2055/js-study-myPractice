@@ -1,9 +1,9 @@
-const P = document.querySelector('p');
-const inp1 = document.querySelector('#fir');
-const inp2 = document.querySelector('#sec');
-const link = document.querySelector('#elem');
+let elem1 = document.querySelector('#elem1');
+elem1.addEventListener('blur', func);
 
-link.addEventListener('click', function func(event) {
-	event.preventDefault();
-	P.textContent = +inp1.value + +inp2.value;
-})
+let elem2 = document.querySelector('#elem2');
+elem2.addEventListener('blur', func);
+
+function func() {
+	console.log(this.value); // выведет или 'text1', или 'text2'
+}
