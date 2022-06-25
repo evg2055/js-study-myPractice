@@ -1,22 +1,7 @@
-"use strict";
+let elem = document.querySelector('#elem');
 
-const elem = document.querySelector('#elem');
+function func(surname, name) {
+	console.log(this.value + ', ' + surname + ' ' + name);
+}
 
-// elem.addEventListener('blur', func);
-
-// function func() {
-// 	alert ( square(this) );
-
-// 	function square(param) {
-// 		return param.value ** 2;
-// 	}
-// }
- function func() {
-	console.log(this.value);
-
-	let grog = () => console.log(this.value);
-	grog()
- }
-//  let grog = () => console.log(this.getSelection());
-
- elem.addEventListener('blur', func);
+func.call(elem, 'Иван', "Иванов"); // тут должно вывести 'привет, Иванов Иван'
