@@ -1,7 +1,12 @@
-let i = 10;
+'use strict'
 
-let timerId = setInterval(() => {
-	i--;
+const BUTTON = document.querySelector('#button');
 
-	i >= 0 ? console.log(i) : clearInterval(timerId) + console.log('done');
-}, 1000);
+BUTTON.addEventListener('click', function func() {
+	 let i = 10;
+
+	 setInterval(() => console.log(--i), 1000);
+
+	 this.removeEventListener('click', func);
+});
+
