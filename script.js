@@ -1,8 +1,7 @@
 let i = 10;
 
-function func() {
+let timerId = setInterval(() => {
 	i--;
-	i >= 0 ? console.log(i) : console.log('done');
-}
 
-setInterval(func,1000);
+	i >= 0 ? console.log(i) : clearInterval(timerId) + console.log('done');
+}, 1000);
