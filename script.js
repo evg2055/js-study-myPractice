@@ -1,8 +1,8 @@
-let i = 0;
+let i = 10;
 
 function func() {
-	i++;
-	console.log(i);
+	i--;
+	i >= 0 ? console.log(i) : console.log('done');
 }
 
 setInterval(func,1000);
