@@ -1,10 +1,8 @@
-let elem = document.getElementById('elem');
+let i = 0;
 
-function func(surname, name) {
-	console.log(this.value + ', ' + surname + ' ' + name);
+function func() {
+	i++;
+	console.log(i);
 }
 
-let newFunc = func.bind(elem);
-
-func.call(elem,'Иванов', 'Иван'); // тут должно вывести 'привет, Иванов Иван'
-newFunc('Петров', 'Петр'); // тут должно вывести 'привет, Петров Петр'
+setInterval(func,1000);
