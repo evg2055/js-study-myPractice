@@ -1,22 +1,17 @@
 'use strict';
-// щенячий патруль
 
-const INPUT = document.querySelector('#input');
-const PAR = document.querySelector('#paragraph');
-const START = document.querySelector('#start');
-const STOP = document.querySelector('#stop');
-let i;
-let timerId;
+const Paragraph = document.querySelector('#paragraph');
+
+let i = 1;
+let j = 1000;
 
 function func() {
-	i = this.value;
-	this.removeEventListener('blur', func)
-	timerId = setInterval(() => {
-		PAR.textContent = i++;
-		if(i > 10) {clearInterval(timerId)}
-	}, 1000)
+	setTimeout(() => {
+		console.log(i++);
+		j += 1000;
+		func();
+
+	}, j)
 }
 
-INPUT.addEventListener('blur', func);
-
-STOP.addEventListener('click', () => {clearInterval(timerId)})
+func();
