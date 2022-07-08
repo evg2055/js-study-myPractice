@@ -1,10 +1,8 @@
-const parent = document.querySelector('#parent');
-const elems = document.querySelectorAll('#parent li') 
+const ELEM = document.querySelector('#elem');
+const REMOVE = document.querySelector('#remove');
 
-for (let elem of elems) {
-    elem.addEventListener('click', (event) => {
-        parent.removeChild(event.target);
-    })
-}
+REMOVE.addEventListener('click', function (event) {
+    ELEM.parentElement.removeChild(ELEM);
+    event.preventDefault();
 
-
+})
