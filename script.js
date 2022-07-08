@@ -14,12 +14,30 @@ for(let subarr of arr) {
     }
     TABLE.appendChild(newTr);
 }
+
 let tdArr = document.querySelectorAll('#table td');
+let i = 1;
 
-for(let i = 0; i <= tdArr.length-1; i++) {
-    tdArr[i].addEventListener('click', (event) => {
-        event.target.innerHTML = tdArr.length - i
+for(let elem of tdArr) {
+    elem.addEventListener('click', () => {
+    
+    let eL = elem.innerHTML;
+    
+    
+
+    if (eL == '2' || eL == '3') {
+        eL = i;
+    } 
+    if (eL == '1' || eL == '3') {
+        i = 2;
+        eL = i;
+    }
+    if (eL == '1' || eL == '2') {
+        i = 3;
+        eL = i;
+    } else {elem.innerHTML = i;
+    alert(eL)}
+    elem.innerHTML = i;
     })
+
 }
-
-

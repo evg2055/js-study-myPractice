@@ -7,3 +7,6 @@ li {
 	margin-bottom: 20px;
 	border: 1px dashed black;
 }
+td {
+	border: 3px solid;
+}
