@@ -1,18 +1,13 @@
-const TABLE = document.querySelector('table');
-const TRS = document.querySelectorAll('table tr');
-const TDS = document.querySelectorAll('table td');
+class User {};
+let USER1 = new User;
+let USER2 = new User;
+let USER3 = new User;
 
-for(let elem of TRS) {
-    let addTD = document.createElement('td');
-    let remove = document.createElement('a');
-    remove.href = '';
-    remove.innerHTML = 'remove';
-    remove.addEventListener('click', (event) => {
-        addTD.parentElement.remove(event.target.parentElement);
-        // console.log(elem.parentElement, event.target.parentElement)
-        event.preventDefault();
-    })
-    addTD.appendChild(remove);
-    elem.appendChild(addTD);
-}
+USER1.name = 'eric';
+USER2.name = 'john';
+USER3.name = 'crack';
+USER1.salary = 100;
+USER2.salary = 200;
+USER3.salary = 300;
 
+console.log(USER1.salary + USER2.salary + USER3.salary)
