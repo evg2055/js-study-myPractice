@@ -1,11 +1,14 @@
 class stud {
-    IN(str,str2) {
-        return str[0].toUpperCase() + str2[0].toUpperCase()
+    name;
+    surn;
+
+    show() {
+       return this.name + '  ' + this.surn;
     }
 }
 
-let studJo = new stud;
-studJo.name = 'jo';
-studJo.surn = 'ma'
+let stud1 = new stud;
+stud1.name = 'bill';
+stud1.surn = 'geit'
 
-console.log(studJo.IN(studJo.name, studJo.surn))
+console.log(stud1.show())
