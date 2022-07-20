@@ -1,7 +1,19 @@
 class jober {
     constructor(name, salary) {
-        console.log(name + ' ' + salary)
+        this.name = name;
+        this.salary = salary;
+    }
+    show() {
+        console.log(this.name + ' ' + this.salary)
+    }
+    upSalary() {
+        this.salary += this.salary * 0.1;
+        console.log(this.salary)
     }
 }
 
-new jober('john', 3030)
+let igor = new jober('igor', 300);
+
+igor.upSalary();
+igor.upSalary();
+igor.upSalary();
