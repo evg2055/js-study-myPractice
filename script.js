@@ -1,6 +1,7 @@
-class employ{
-    constructor() {
-        console.log("+++");
+class jober {
+    constructor(name, salary) {
+        console.log(name + ' ' + salary)
     }
 }
-new employ;
+
+new jober('john', 3030)
