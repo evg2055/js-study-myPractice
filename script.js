@@ -1,9 +1,11 @@
-class JOB {
-    pres(name, salary) {
-        console.log(name + salary)
+class stud {
+    IN(str,str2) {
+        return str[0].toUpperCase() + str2[0].toUpperCase()
     }
 }
 
-let user = new JOB;
+let studJo = new stud;
+studJo.name = 'jo';
+studJo.surn = 'ma'
 
-user.pres('john','300');
+console.log(studJo.IN(studJo.name, studJo.surn))
