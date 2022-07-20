@@ -1,9 +1,9 @@
-class SALARY {
-    sum(digital) {
-        return digital > 2;
+class JOB {
+    pres(name, salary) {
+        console.log(name + salary)
     }
 }
 
-let user = new SALARY;
+let user = new JOB;
 
-console.log(user.sum(1))
+user.pres('john','300');
