@@ -1,17 +1,25 @@
-class employee {
+class Employee {
     #name;
     #age;
     #salary;
-    constructor(name, age, salary) {
-        this.#name = name;
-        this.#age = age;
-        this.#salary = salary;
+
+    // constructor(name, age, salary) {
+    //     this.#name = name;
+    //     this.#age = age;
+    //     this.#salary = salary;
+    // }
+
+    getName() {
+        return this.#name;
     }
-    show() {
-        console.log( this.#name + ' ' + this.#age + ' ' + this.#salary)
+    getAge() {
+        return this.#age;
+    }
+    getSalary() {
+        return this.#salary + '$';
     }
 }
 
-let gen = new employee("gen", 22, 2000);
+let employee1 = new Employee('igor', 22, 2000)
 
-gen.show();
+console.log(employee1.getSalary());
