@@ -18,8 +18,18 @@ class Employee {
     getSalary() {
         return this.#salary + '$';
     }
+    setName(name) {
+        this.#name = name;
+    }
+    setAge(age) {
+        this.#age = age;
+    }
+    setSalary(salary) {
+        this.#salary = salary;
+    }
 }
 
-let employee1 = new Employee('igor', 22, 2000)
+let employee1 = new Employee
 
+employee1.setSalary(1000);
 console.log(employee1.getSalary());
