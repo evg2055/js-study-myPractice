@@ -1,19 +1,17 @@
-class jober {
-    constructor(name, salary) {
-        this.name = name;
-        this.salary = salary;
+class employee {
+    #name;
+    #age;
+    #salary;
+    constructor(name, age, salary) {
+        this.#name = name;
+        this.#age = age;
+        this.#salary = salary;
     }
     show() {
-        console.log(this.name + ' ' + this.salary)
-    }
-    upSalary() {
-        this.salary += this.salary * 0.1;
-        console.log(this.salary)
+        console.log( this.#name + ' ' + this.#age + ' ' + this.#salary)
     }
 }
 
-let igor = new jober('igor', 300);
+let gen = new employee("gen", 22, 2000);
 
-igor.upSalary();
-igor.upSalary();
-igor.upSalary();
+gen.show();
