@@ -1,35 +1,25 @@
-class Employee {
+class employee {
     #name;
-    #age;
-    #salary;
+    #surn;
 
-    // constructor(name, age, salary) {
-    //     this.#name = name;
-    //     this.#age = age;
-    //     this.#salary = salary;
-    // }
+    setName(name) {
+        this.#name = name;
+        return this;
 
+    }
+    setSurn(surn) {
+        this.#surn = surn;
+
+    }
     getName() {
         return this.#name;
     }
-    getAge() {
-        return this.#age;
-    }
-    getSalary() {
-        return this.#salary + '$';
-    }
-    setName(name) {
-        this.#name = name;
-    }
-    setAge(age) {
-        this.#age = age;
-    }
-    setSalary(salary) {
-        this.#salary = salary;
+    getSurn() {
+        return this.#surn;
     }
 }
 
-let employee1 = new Employee
+let employee1 = new employee();
 
-employee1.setSalary(1000);
-console.log(employee1.getSalary());
+employee1.setName('john').setSurn('travolta');
+console.log(employee1.getName(),employee1.getSurn());
