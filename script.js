@@ -1,25 +1,27 @@
-class employee {
-    #name;
-    #surn;
-
-    setName(name) {
-        this.#name = name;
-        return this;
-
-    }
-    setSurn(surn) {
-        this.#surn = surn;
-
-    }
-    getName() {
-        return this.#name;
-    }
-    getSurn() {
-        return this.#surn;
-    }
+class Student {
+	constructor(name) {
+		this.name = name;
+	}
+}
+class Employee {
+	constructor(name) {
+		this.name = name;
+	}
 }
 
-let employee1 = new employee();
+let users = [
+	new Student('user1'),
+	new Employee('user2'),
+	new Student('user3'),
+	new Employee('user4'),
+	new Student('user5'),
+	new Employee('user6'),
+	new Student('user7'),
+];
 
-employee1.setName('john').setSurn('travolta');
-console.log(employee1.getName(),employee1.getSurn());
+for(let elem of users) {
+    // console.log(elem instanceof Student);
+    if(elem instanceof Student) {
+        console.log(elem.name)
+    }
+}
