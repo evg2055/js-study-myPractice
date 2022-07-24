@@ -1,27 +1,23 @@
-class Student {
-	constructor(name) {
-		this.name = name;
-	}
-}
 class Employee {
-	constructor(name) {
+	constructor(name, position, department) {
 		this.name = name;
+		this.position = position;
+		this.department = department;
 	}
 }
-
-let users = [
-	new Student('user1'),
-	new Employee('user2'),
-	new Student('user3'),
-	new Employee('user4'),
-	new Student('user5'),
-	new Employee('user6'),
-	new Student('user7'),
-];
-
-for(let elem of users) {
-    // console.log(elem instanceof Student);
-    if(elem instanceof Student) {
-        console.log(elem.name)
+class Position {
+    constructor(name) {
+        this.name = name;
     }
 }
+class Department  {
+    constructor(department) {
+        this.department = department;
+    }
+}
+
+let department = new Department('develop');
+let position = new Position('midele');
+let employee = new Employee('ivan', position, department);
+
+console.log(employee.name, employee.position.name, employee.department.department);
