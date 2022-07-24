@@ -1,23 +1,21 @@
 class Employee {
-	constructor(name, position, department) {
-		this.name = name;
-		this.position = position;
-		this.department = department;
-	}
-}
-class Position {
-    constructor(name) {
-        this.name = name;
+    #name;
+    constructor(name){
+        this.#name = name;
     }
-}
-class Department  {
-    constructor(department) {
-        this.department = department;
+
+    getName() {
+        return this.#name;
     }
 }
 
-let department = new Department('develop');
-let position = new Position('midele');
-let employee = new Employee('ivan', position, department);
+let employeeArrr = [
+    new Employee ('igor'),
+    new Employee ('igor1'),
+    new Employee ('igor2'),
+    new Employee ('igor3'),
+]
 
-console.log(employee.name, employee.position.name, employee.department.department);
+for(let elem of employeeArrr) {
+    console.log(elem.getName());
+}
