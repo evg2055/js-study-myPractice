@@ -1,21 +1,20 @@
 class User {
-    setName(name) {
-        this.name = name;
+    setAge (age) {
+        this.age = age;
     }
-    getName() {
-        return this.name;
+    getAge() {
+
+        if (this.age != undefined)
+        {return this.age;} else {console.log('error2')}
     }
 }
 class Emploeey extends User {
-    setSalary(salary) {
-        this.salary = salary;
+    setAge (age) {
+        age > 18 && age < 65 ? this.age = age : console.log('error');
     }
-    getSalary() {
-        return this.salary;
-    }
-};
+}
 
-let ivanEmploeey = new Emploeey;
+let old = new Emploeey;
 
-ivanEmploeey.setSalary(100);
-console.log(ivanEmploeey.getSalary());
+old.setAge(66);
+console.log(old.getAge());
